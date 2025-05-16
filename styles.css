@@ -1,0 +1,444 @@
+    <style>
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #311818;
+    text-decoration: #dbe3e4;
+}
+
+body {
+  background-color: rgb(59, 95, 96); /* Cambia 'blue' por el color que desees */
+}
+
+.head {
+    max-width: 25px; /* La imagen no superará este ancho */
+    height: auto;     /* Mantiene la proporción */
+    display: block;
+    margin-top: 10px;
+}
+
+header {
+    background: #eff3f3;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.hover:hover {
+    color: blue; /* Cambia 'blue' por el color que quieras */
+    /* text-decoration: underline; /* Opcional: subraya la palabra al pasar el ratón */
+}
+.titulo {
+    float: left; /* Hace que la imagen flote a la izquierda */
+    width: 30%; /* Ejemplo: La imagen ocupará el 30% del ancho de su contenedor */
+    max-width: 280px; /* Opcional: Limita el ancho máximo para que no sea demasiado grande en pantallas anchas */
+    height: auto; /* Mantiene la proporción de la imagen */
+
+    /* Añade espacio alrededor de la imagen para separarla del texto y otros elementos */
+    margin-right: 20px; /* Espacio a la derecha (entre la imagen y el texto) */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    margin-top: 10px; /* Pequeño espacio arriba si lo necesitas */
+
+    /* Estilos de decoración para "buena vista" */
+    border: 4px solid #f0f0f0; /* Ejemplo: Un borde gris claro */
+    padding: 8px; /* Espacio entre el borde y la imagen */
+    background-color: #ffffff; /* Fondo blanco detrás de la imagen/padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Una sombra que da relieve */
+    border-radius: 10px; /* Opcional: Esquinas redondeadas */
+    object-fit: cover; /* Opcional: Cómo se ajusta la imagen si se especifica height */
+}
+
+.menu-hover :hover {
+    color: green; /* Cambia 'blue' por el color que quieras */
+    /* text-decoration: underline; /* Opcional: subraya la palabra al pasar el ratón */
+}
+
+ 
+.container {
+    
+    width: 80%;
+    margin-top: 300px;
+    margin-right: 100px;
+    margin: auto;
+      justify-content: space-between;
+}
+.container p{
+    color: darkblue;       /* Color del texto */
+    background-color: rgb(0, 255, 183); /* Color de fondo */
+    padding: 10px;         /* Opcional: añade un poco de espacio alrededor del texto para que el fondo se vea mejor */
+    border-radius: 8px;
+}
+.container h1 {
+    color: #004b87; /* Color atractivo para el título */
+    font-size: 3.5em; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(66, 58, 58);
+    text-decoration: none;
+}
+
+/*#hero {
+    text-align: center;
+    padding: 50px 0;
+    background: #f5887e;
+    color: white;
+}*/
+#hero {
+    display: flex; /* Convierte la sección en un contenedor flex */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    gap: 30px; /* Añade espacio entre los elementos (imagen y texto) */
+    padding: 20px; /* Opcional: añade un poco de espacio interno a la sección */
+    /* Por defecto, flex-direction es 'row', que coloca los elementos en fila */
+}
+
+#hero .descarga1img {
+    /* Controla el tamaño de la imagen con CSS */
+    width: 40%; /* La imagen ocupará el 40% del ancho de la sección */
+    max-width: 400px; /* Opcional: limita el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    flex-shrink: 0; /* Evita que la imagen se encoja si no hay suficiente espacio */
+    order: 2; /* Esto es clave: coloca la imagen en segundo lugar en el orden flex (a la derecha) */
+}
+
+#hero .hero-text {
+    /* El contenedor de texto ocupará el espacio restante */
+    flex-grow: 1; /* Permite que el div de texto crezca para ocupar el espacio disponible */
+    width: 60%; /* Le damos un ancho base del 60% */
+    order: 1; /* Coloca el texto en primer lugar en el orden flex (a la izquierda) */
+}
+
+/* Opcional: Media Query para pantallas pequeñas */
+/* En pantallas pequeñas, es mejor que los elementos se apilen verticalmente */
+@media (max-width: 768px) { /* Ajusta el tamaño del breakpoint según necesites */
+    #hero {
+        flex-direction: column; /* Cambia la dirección a columna (apilados) */
+        text-align: center; /* Centra el texto cuando está apilado */
+    }
+
+    #hero .descarga1img,
+    #hero .hero-text {
+        width: 100%; /* Que ocupen todo el ancho disponible */
+        max-width: none; /* Elimina la restricción de ancho máximo si la pusiste */
+        order: initial; /* Restablece el orden por defecto (como aparecen en el HTML) */
+    }
+
+    #hero .descarga1img {
+         margin-bottom: 20px; /* Añade espacio debajo de la imagen cuando está arriba */
+    }
+
+}
+
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card {
+    margin: 10px 0;
+}
+
+section#contact{
+    width: 100px; /*ancho de la sección*/
+    background-color:rgb(79, 196, 219);
+    padding: 21px;
+    border:1px solid #ccc; /* Borde */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+ 
+}
+h2 {
+    color: white; /* Cambia el color del texto a blanco */
+    text-align: center;
+}
+section#about {
+            width: 100px; /* Ancho de la sección */
+            background-color: rgb(79, 196, 219); /* Color de fondo */
+            padding: 21px; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            border-radius: 8px; /* Bordes redondeados */
+           
+        }
+    section#Products{
+            width: 100px; /* Ancho de la sección */
+            background-color: rgb(79, 196, 219); /* Color de fondo */
+            padding: 21px; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            border-radius: 8px; /* Bordes redondeados */
+           
+}
+  section#suport {
+            width: 100px; /* Ancho de la sección */
+            background-color: rgb(79, 196, 219); /* Color de fondo */
+            padding: 21px; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            border-radius: 8px; /* Bordes redondeados */
+           
+        }
+        h2 {
+            color: white; /* Color del texto del encabezado */
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        label {
+            display: block; /* Cada etiqueta en una nueva línea */
+            color: black; /* Color del texto de las etiquetas */
+            margin: 5px 0; /* Margen vertical entre etiquetas */
+        }
+--
+form {
+        display: flex; /* Usar flexbox para el formulario */
+        flex-direction: column; /* Colocar elementos en columna */
+    }
+    label {
+        margin: 8px 0 5px; /* Espaciado entre etiquetas */
+        display: block; /* Asegura que cada etiqueta esté en su propia línea */
+    }
+    input, textarea {
+        margin-bottom: 0,5px; /* Espaciado entre campos */
+        padding: 10px; /* Espaciado interno */
+        border: 1px solid #ccc; /* Borde */
+        border-radius: 4px; /* Bordes redondeados */
+    }
+    button {
+        padding: 15px; /* Espaciado interno */
+        background-color: #004b87; /* Color de fondo del botón */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambiar cursor al pasar el ratón */
+        display: block; /* Asegura que el botón sea un bloque */
+        margin: 0 auto; /* Centra el botón horizontalmente */
+    }
+    button:hover {
+        background-color: #003366; /* Color del botón al pasar el ratón */
+    }
+    --
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #503462;
+    color: white;
+}
+section#benefits h2{
+    color: black; /* Cambia el color del texto a blanco */
+    
+}
+section#benefits{
+    width: auto;
+    height: auto;  
+}
+
+img{
+    max-width: 100%;
+    height: auto; 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: right;
+            background-image: url('/images/analisis.jpg');
+          
+        }
+
+.caja {
+            width: 300px;
+            height: 330px;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: right;
+            margin-left: 60%;
+        }
+
+        .caja img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    
+
+.logo {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción */
+}
+/*aquí divido la sección 'carracterísticas'*/
+
+
+#features {
+    display: flex; /* Activa Flexbox para los elementos hijos directos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
+    gap: 20px; /* Añade espacio entre los elementos flexibles (los divs de características) */
+    justify-content: center; /* Centra los elementos horizontalmente si no llenan completamente la fila */
+    margin-top: 40px; /* Espacio arriba de la sección */
+    margin-bottom: 40px; /* Espacio abajo de la sección */
+    padding: 0 15px; /* Un poco de padding a los lados para que no se pegue a los bordes en móviles */
+}
+
+/* Estilos para el título principal de la sección */
+#features h2 {
+    width: 100%; /* Hace que el título ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto del título */
+    margin-bottom: 30px; /* Espacio debajo del título principal */
+    color: #004b87; /* Mantiene el color original */
+}
+
+/* Estilos comunes para los tres divs de características (las columnas/campos) */
+.feature-menu,
+.feature-noticias,
+.feature-eventos {
+    flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px */
+                    /* Esto hace que cada div intente tener al menos 300px de ancho y se distribuya equitativamente */
+                    /* Si el contenedor es demasiado estrecho, se envolverán a la siguiente línea */
+
+    /* Estilos visuales para la tarjeta/campo */
+    border: 1px solid #ddd; /* Un borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px; /* Espacio interno dentro del div */
+    text-align: center; /* Centra el texto e imágenes dentro del div */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Una sombra suave */
+    background-color: #a0c9cac5; /* Fondo blanco */
+
+    /* Usar Flexbox internamente para apilar h3, img, p verticalmente */
+    display: flex;
+    flex-direction: column-reverse; /* Apila los elementos hijos (h3, img, p) verticalmente */
+    align-items: center; /* Centra los elementos (h3, img, p) horizontalmente dentro de la columna */
+}
+
+/* Estilos para los títulos dentro de cada div de característica */
+.feature-menu h3,
+.feature-noticias h3,
+.feature-eventos h3 {
+    margin-top: 0; /* Elimina el margen superior por defecto */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    color: #333; /* Color más oscuro para los títulos */
+}
+
+/* Estilos para las imágenes dentro de cada div de característica */
+.feature-menu img,
+.feature-noticias img,
+.feature-eventos img {
+    max-width: 100%; /* Asegura que la imagen no se desborde de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen para separarla del párrafo */
+    border-radius: 4px; /* Opcional: Esquinas ligeramente redondeadas para las imágenes */
+    /* object-fit: cover; /* Opcional: si quieres que la imagen cubra un área específica sin distorsionarse */
+    /* width: 100%; /* Si quieres que la imagen siempre ocupe todo el ancho de la tarjeta (hasta max-width) */
+}
+
+/* Estilos para los párrafos dentro de cada div de característica */
+.feature-menu p,
+.feature-noticias p,
+.feature-eventos p {
+    margin-top: 0; /* Elimina el margen superior por defecto */
+    color: #555; /* Un color de texto ligeramente más claro */
+    line-height: 1.6; /* Mejora la legibilidad */
+    /* flex-grow: 1; /* Opcional: Permite que el párrafo ocupe el espacio restante si las tarjetas tienen diferentes alturas */
+}
+
+/*PARA LA SECCIÓN BENEFICIOS*/
+/* Estilos para el contenedor que envuelve la imagen y la lista */
+.image-list-container {
+    display: flex; /* Activates Flexbox on this container */
+    flex-direction: row; /* Arranges children (image and list) in a row (left to right) */
+    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+    gap: 30px; /* Adds space between the image and the list */
+    align-items: flex-start; /* Aligns items to the top vertically */
+    margin-top: 20px; /* Space above this container */
+    /* margin-bottom: 30px; /* Space below this container - adjust if needed */
+    padding: 0 15px; /* Padding on the sides */
+     padding-left: 140px; /* Adjusts left padding for list bullets */
+    
+}
+
+/* Estilos para el div que contiene la imagen */
+.image-list-container .lista {
+    flex-basis: 300px; /* Preferred width for the image container */
+    flex-grow: 0; /* Prevents the image container from growing */
+    flex-shrink: 1; /* Allows the image container to shrink */
+    display: block; /* Helps with image display */
+}
+
+/* Estilos para la imagen dentro del div .lista */
+.image-list-container .lista .benefitsimg {
+    max-width: 100%; /* Image will not exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures image behaves as a block */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Estilos para la lista (ul) */
+.image-list-container ul {
+    flex-grow: 1; /* Allows the list to take up remaining space */
+    flex-shrink: 1; /* Allows the list to shrink */
+    flex-basis: 0; /* Base width is 0, size controlled by flex-grow */
+    margin-top: 0; /* Removes default top margin */
+    padding-left: 80px; /* Adjusts left padding for list bullets */
+}
+
+/* Estilos para los elementos de la lista (li) */
+.image-list-container ul li {
+    margin-bottom: 10px; /* Space between list items */
+    line-height: 1.6; /* Improves readability */
+    color: #333;
+}
+
+/* Optional: Style the heading if needed */
+#benefits h2 {
+    text-align: center; /* Example: center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #3498db; /* Color del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    hover{
+        color: #e4eee8;
+    }
+  }
+
+  @keyframes mover {
+    from {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    
+  }
+
+  .movimiento {
+    animation: mover 30s linear infinite;
+    color: #2fbd65;
+  }
+
+
+
+
+    </style>
